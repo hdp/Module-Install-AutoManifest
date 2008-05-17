@@ -6,7 +6,5 @@ author   'Hans Dieter Pearcey <hdp@cpan.org>';
 
 build_requires 'Test::More';
 
-auto_manifest;
-
+extra_tests;
 WriteAll;
-
