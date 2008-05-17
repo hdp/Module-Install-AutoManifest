@@ -45,40 +45,31 @@ Version 0.001
 
 =cut
 
-our $VERSION = '0.001';
-
-
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+In Makefile.PL:
 
-Perhaps a little code snippet.
+  auto_manifest;
 
-    use Module::Install::AutoManifest;
+In MANIFEST.SKIP:
 
-    my $foo = Module::Install::AutoManifest->new();
-    ...
+  # put your list of patterns here
+  ^\.git/
+  ^your-crazy-files-whatever$
 
-=head1 EXPORT
+In MANIFEST:
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+  Nothing, remove it
 
-=head1 FUNCTIONS
+=head1 METHODS
 
-=head2 function1
+=head2 auto_manifest
 
-=cut
+This extension to L<Module::Install> adds behavior for automatically generating
+MANIFEST.
 
-sub function1 {
-}
-
-=head2 function2
-
-=cut
-
-sub function2 {
-}
+Before C<make distdir>, C<make manifest> will be run for you automatically.
+Likewise, C<make distclean> will remove your automatically-generated MANIFEST.
 
 =head1 AUTHOR
 
@@ -123,8 +114,9 @@ L<http://search.cpan.org/dist/Module-Install-AutoManifest>
 =back
 
 
-=head1 ACKNOWLEDGEMENTS
+=head1 SEE ALSO
 
+L<Module::Install>
 
 =head1 COPYRIGHT & LICENSE
 
