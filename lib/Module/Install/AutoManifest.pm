@@ -6,7 +6,7 @@ package Module::Install::AutoManifest;
 use Module::Install::Base;
 
 BEGIN {
-  our $VERSION = '0.002';
+  our $VERSION = '0.003';
   our $ISCORE  = 1;
   our @ISA     = qw(Module::Install::Base);
 }
@@ -43,7 +43,7 @@ Module::Install::AutoManifest - generate MANIFEST automatically
 
 =head1 VERSION
 
-Version 0.002
+Version 0.003
 
 =cut
 
