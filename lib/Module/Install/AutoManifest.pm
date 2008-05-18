@@ -14,6 +14,8 @@ BEGIN {
 sub auto_manifest {
   my ($self) = @_;
 
+  return unless $Module::Install::AUTHOR;
+
   die "auto_manifest requested, but no MANIFEST.SKIP exists\n"
     unless -e "MANIFEST.SKIP";
 
